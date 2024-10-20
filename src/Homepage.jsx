@@ -29,7 +29,7 @@ const Homepage = () => {
           bottom-5 left-5 
           md:bottom-52 md:left-32 
           md:translate-y-0 md:translate-x-0
-          flex flex-col gap-2 items-center justify-center 
+          flex flex-col gap-2 items-start justify-center 
           text-center 
           md:items-start md:text-left 
           md:static md:flex-none
@@ -38,7 +38,7 @@ const Homepage = () => {
         <span className="text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
           MEMBERS GET MORE
         </span>
-        <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1">
+        <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[550px] ">
           Join adiClub for exclusive products, events, and prize draws during
           adiClub Days starting 24 Oct.
         </span>
