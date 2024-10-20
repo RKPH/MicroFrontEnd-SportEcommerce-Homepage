@@ -22,7 +22,7 @@ const Homepage = () => {
       >
         Count +1
       </button>
-      <div className="bottom-30 left-30  absolute h-20 w-1/3 bg-teal-200"></div>
+      <div className="bottom-32 left-32  absolute h-20 w-1/3 bg-teal-200"></div>
     </div>
   );
 };
