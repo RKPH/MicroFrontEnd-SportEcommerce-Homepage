@@ -1,19 +1,14 @@
 import React, { useState } from "react";
-import useCounterStore from "shell/counterStore";
+
+import { useDispatch, useSelector } from "react-redux";
+import { increaseCount } from "shell/counterStore";
+
 const Homepage = () => {
-  const [count, setCount] = useState(0);
-  const increaseCount = useCounterStore((state) => state.increaseCount); // Get increaseCount action
+  const dispatch = useDispatch();
   return (
     <div>
       Hello Homepage Testting Fuck cần bull shit
-      <button
-        onClick={() => {
-          increaseCount();
-          console.log("testing purpose");
-        }}
-      >
-        Count +1{" "}
-      </button>
+      <button onClick={() => dispatch(increaseCount())}>Count +1 </button>
     </div>
   );
 };
