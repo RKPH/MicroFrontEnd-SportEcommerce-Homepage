@@ -6,8 +6,8 @@ const Homepage = () => {
   const count = useCounterStore((state) => state.count);
 
   return (
-    <div>
-      <h1>Hello Homepage Testing</h1>
+    <div className="w-full min-h-screen bg-yellow-300">
+      <h1 className="text-black text-lg uppercase">Hello Homepage Testing</h1>
       <p>Current Count: {count}</p>
       <button
         onClick={() => {
