@@ -45,10 +45,10 @@ const Homepage = () => {
 
         {/* Optional: Add buttons for free join and explore */}
         <div className="flex gap-4 mt-2">
-          <button className="bg-black text-white px-4 py-2 uppercase">
+          <button className="bg-white text-black px-4 py-2 uppercase W-1/2">
             Join for free
           </button>
-          <button className="border-black border-2 px-4 py-2 uppercase">
+          <button className="bg-white text-black border-2 px-4 py-2 uppercase W-1/2">
             Explore more
           </button>
         </div>
