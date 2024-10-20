@@ -13,20 +13,29 @@ const Homepage = () => {
       }}
     >
       <button
-        className="border-black border-2 px-2 py-2"
+        className="border-black border-2 px-4 py-2 absolute top-5 left-5"
         onClick={() => {
           console.log("Increase Count Called");
           increaseCount();
-          // Count will update in the UI automatically, no need to log it here
         }}
       >
         Count +1
       </button>
-      <div className="md:bottom-52 md:left-32  md:absolute  flex justify-center  max-w-[550px]">
-        <span className="text-base tracking-wide  font-[AdihausDIN] uppercase font-bold font text-black bg-white px-1 py-1 my-1">
+
+      {/* Text Block */}
+      <div
+        className="
+          absolute bottom-5 left-0 right-0 
+          mx-auto max-w-[550px] 
+          flex flex-col items-center text-center 
+          md:items-start md:text-left 
+          md:bottom-52 md:left-32
+        "
+      >
+        <span className="text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
           MEMBERS GET MORE
         </span>
-        <span className="text-sm inline-block tracking-wide  font-[AdihausDIN] font-normal font text-black bg-white px-1 py-1 my-1">
+        <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 mt-2">
           Join adiClub for exclusive products, events, and prize draws during
           adiClub Days starting 24 Oct.
         </span>
