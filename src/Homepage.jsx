@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import { increaseCount } from "shell/counterStore";
+import useCounterStore from "shell/counterStore"; // Correct import in remote
 
 const Homepage = () => {
+  const increaseCount = useCounterStore((state) => state.increaseCount); // Get increaseCount action
   return (
     <div>
       Hello Homepage Testting Fuck cần bull shit
