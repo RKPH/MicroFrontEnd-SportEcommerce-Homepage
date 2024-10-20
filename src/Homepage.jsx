@@ -8,7 +8,7 @@ const Homepage = () => {
       Hello Homepage Testting Fuck cần bull shit
       <button
         onClick={() => {
-          increaseCount;
+          increaseCount();
           console.log("testing purpose");
         }}
       >
