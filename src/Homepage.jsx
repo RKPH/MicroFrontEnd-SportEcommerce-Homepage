@@ -8,7 +8,14 @@ const Homepage = () => {
   return (
     <div>
       Hello Homepage Testting Fuck cần bull shit
-      <button onClick={() => dispatch(increaseCount())}>Count +1 </button>
+      <button
+        onClick={() => {
+          increaseCount();
+          console.log("testing purpose");
+        }}
+      >
+        Count +1{" "}
+      </button>
     </div>
   );
 };
