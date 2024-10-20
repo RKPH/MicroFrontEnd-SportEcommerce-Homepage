@@ -22,9 +22,13 @@ const Homepage = () => {
       >
         Count +1
       </button>
-      <div className="bottom-32 left-32  absolute   max-w-[550px]">
-        <span className="text-[20px] tracking-wide  font-[AdihausDIN] uppercase font-bold font text-black bg-white px-1 py-1">
+      <div className="bottom-52 left-32  absolute   max-w-[550px]">
+        <span className="text-base tracking-wide  font-[AdihausDIN] uppercase font-bold font text-black bg-white px-1 py-1 my-1">
           MEMBERS GET MORE
+        </span>
+        <span className="text-sm inline-block tracking-wide  font-[AdihausDIN] font-normal font text-black bg-white px-1 py-1 my-1">
+          Join adiClub for exclusive products, events, and prize draws during
+          adiClub Days starting 24 Oct.
         </span>
       </div>
     </div>
