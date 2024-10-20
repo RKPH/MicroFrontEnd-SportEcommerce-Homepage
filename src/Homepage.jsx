@@ -12,9 +12,8 @@ const Homepage = () => {
         backgroundImage: `url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_1_01e19778e1.jpg")`,
       }}
     >
-      <h1 className="text-black text-lg uppercase">Hello Homepage Testing</h1>
-      <p>Current Count: {count}</p>
       <button
+        className="border-black px-2 py-2"
         onClick={() => {
           console.log("Increase Count Called");
           increaseCount();
