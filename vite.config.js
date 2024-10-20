@@ -11,6 +11,9 @@ export default defineConfig({
       exposes: {
         "./HomePage": "./src/Homepage.jsx", // Ensure the file name matches exactly
       },
+      remotes: {
+        shell: "https://micro-frontend-shell.vercel.app/assets/remoteEntry.js", // Use Shell's remote entry
+      },
       shared: ["react", "react-dom"], // Shared dependencies
     }),
   ],
