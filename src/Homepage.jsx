@@ -6,7 +6,14 @@ const Homepage = () => {
   return (
     <div>
       Hello Homepage Testting Fuck cần bull shit
-      <button onClick={increaseCount}>Count</button>
+      <button
+        onClick={() => {
+          increaseCount;
+          console.log("testing purpose");
+        }}
+      >
+        Count +1{" "}
+      </button>
     </div>
   );
 };
