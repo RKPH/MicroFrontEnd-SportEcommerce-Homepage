@@ -13,7 +13,7 @@ const Homepage = () => {
       }}
     >
       <button
-        className="border-black px-2 py-2"
+        className="border-black border-2 px-2 py-2"
         onClick={() => {
           console.log("Increase Count Called");
           increaseCount();
