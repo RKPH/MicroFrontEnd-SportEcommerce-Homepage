@@ -6,14 +6,19 @@ const Homepage = () => {
   const count = useCounterStore((state) => state.count);
 
   return (
-    <div className="w-full min-h-screen bg-yellow-300">
+    <div
+      className="w-full min-h-screen bg-cover"
+      style={{
+        backgroundImage: `url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_1_01e19778e1.jpg")`,
+      }}
+    >
       <h1 className="text-black text-lg uppercase">Hello Homepage Testing</h1>
       <p>Current Count: {count}</p>
       <button
         onClick={() => {
           console.log("Increase Count Called");
           increaseCount();
-          console.log("Count after increase: ", count + 1); // Logs the anticipated next count
+          // Count will update in the UI automatically, no need to log it here
         }}
       >
         Count +1
