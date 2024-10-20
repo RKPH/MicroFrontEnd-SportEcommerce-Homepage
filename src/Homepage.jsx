@@ -38,7 +38,7 @@ const Homepage = () => {
         <span className="text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
           MEMBERS GET MORE
         </span>
-        <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[550px] ">
+        <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[350px] text-wrap">
           Join adiClub for exclusive products, events, and prize draws during
           adiClub Days starting 24 Oct.
         </span>
