@@ -22,7 +22,7 @@ const Homepage = () => {
       >
         Count +1
       </button>
-      <div className="bottom-32 left-32  absolute h-20  bg-white px-2 py-2 max-w-[550px]">
+      <div className="bottom-32 left-32  absolute  bg-white px-2 py-2 max-w-[550px]">
         <span className="text-sm tracking-wide  font-[AdihausDIN] uppercase font-bold text-black">
           MEMBERS GET MORE
         </span>
