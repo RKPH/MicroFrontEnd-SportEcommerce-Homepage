@@ -7,7 +7,7 @@ const Homepage = () => {
 
   return (
     <div
-      className="w-full min-h-screen bg-auto bg-no-repeat"
+      className="w-full min-h-screen bg-auto bg-no-repeat relative"
       style={{
         backgroundImage: `url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_1_01e19778e1.jpg")`,
       }}
@@ -22,6 +22,7 @@ const Homepage = () => {
       >
         Count +1
       </button>
+      <div className="bottom-0 left-0 absolute h-56 w-1/3 bg-teal-200"></div>
     </div>
   );
 };
