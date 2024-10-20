@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-
-import useCounterStore from "shell/counterStore"; // Correct import in remote
+import React from "react";
+import useCounterStore from "shell/counterStore";
 
 const Homepage = () => {
-  const increaseCount = useCounterStore((state) => state.increaseCount); // Get increaseCount action
-  console.log(increaseCount);
+  const increaseCount = useCounterStore((state) => state.increaseCount);
+  const count = useCounterStore((state) => state.count);
+
   return (
     <div>
-      Hello Homepage Testting Fuck cần bull shit
+      <h1>Hello Homepage Testing</h1>
+      <p>Current Count: {count}</p>
       <button
         onClick={() => {
+          console.log("Increase Count Called");
           increaseCount();
-          console.log("testing purpose");
+          console.log("Count after increase: ", count + 1); // Logs the anticipated next count
         }}
       >
-        Count +1{" "}
+        Count +1
       </button>
     </div>
   );
