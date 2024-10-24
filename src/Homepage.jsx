@@ -64,11 +64,11 @@ const Homepage = () => {
       </div>
 
       <div>
-        <ul className="flex gap-x-4 w-full bg-white px-5 pb-10">
-          <li className="p-1 border border-black ">DropSet</li>
-          <li className="p-1 border border-black">Adizero</li>
-          <li className="p-1 border border-black">New Arrivals</li>
-          <li className="p-1 border border-black">Takewondo</li>
+        <ul className="flex gap-x-4 w-full bg-white px-5 pb-10  font-[AdihausDIN] text-base font-bold">
+          <li className="p-3 border border-black ">DropSet</li>
+          <li className="p-3 border border-black">Adizero</li>
+          <li className="p-3 border border-black">New Arrivals</li>
+          <li className="p-3 border border-black">Takewondo</li>
         </ul>
       </div>
     </main>
