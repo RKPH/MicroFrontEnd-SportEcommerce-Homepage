@@ -64,7 +64,7 @@ const Homepage = () => {
       </div>
 
       <div>
-        <ul className="flex gap-x-4">
+        <ul className="flex gap-x-4 w-full bg-white px-5 py-10">
           <li>DropSet</li>
           <li>Adizero</li>
           <li>New Arrivals</li>
