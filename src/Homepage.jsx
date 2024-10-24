@@ -9,7 +9,7 @@ const Homepage = () => {
     <main className="w-full h-full">
       {/* Hero banner */}
       <div
-        className="w-full h-fit bg-contain bg-no-repeat relative"
+        className="w-full min-h-screen bg-contain bg-no-repeat relative"
         style={{
           backgroundImage: `url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_1_01e19778e1.jpg")`,
         }}
@@ -64,11 +64,11 @@ const Homepage = () => {
       </div>
 
       <div>
-        <ul className="flex gap-x-4 w-full bg-white px-5 py-10">
-          <li className="p-5 border border-black">DropSet</li>
-          <li className="p-5 border border-black">Adizero</li>
-          <li className="p-5 border border-black">New Arrivals</li>
-          <li className="p-5 border border-black">Takewondo</li>
+        <ul className="flex gap-x-4 w-full bg-white px-5 pb-10">
+          <li className="p-3 border border-black">DropSet</li>
+          <li className="p-3 border border-black">Adizero</li>
+          <li className="p-3 border border-black">New Arrivals</li>
+          <li className="p-3 border border-black">Takewondo</li>
         </ul>
       </div>
     </main>
