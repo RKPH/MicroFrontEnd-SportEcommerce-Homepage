@@ -65,10 +65,10 @@ const Homepage = () => {
 
       <div>
         <ul className="flex gap-x-4 w-full bg-white px-5 py-10">
-          <li>DropSet</li>
-          <li>Adizero</li>
-          <li>New Arrivals</li>
-          <li>Takewondo</li>
+          <li className="p-5 border border-black">DropSet</li>
+          <li className="p-5 border border-black">Adizero</li>
+          <li className="p-5 border border-black">New Arrivals</li>
+          <li className="p-5 border border-black">Takewondo</li>
         </ul>
       </div>
     </main>
