@@ -1,91 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import useCounterStore from "shell/counterStore";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
-
 import ProductCard from "./Components/ProductCard";
 
+// Sample product data with 10 items per category
 const products = [
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "3.500.000₫",
-    name: "Giày Dropset 3",
-    category: "Performance",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "2.200.000₫",
-    name: "Giày Adizero SL",
-    category: "Running",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "3.900.000₫",
-    name: "Giày Ultraboost Light",
-    category: "Lifestyle",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "2.500.000₫",
-    name: "Giày NMD R1 V2",
-    category: "Originals",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "1.800.000₫",
-    name: "Giày Forum Low",
-    category: "Originals",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "2.800.000₫",
-    name: "Giày Supernova",
-    category: "Running",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "4.500.000₫",
-    name: "Giày Terrex Swift R3 GTX",
-    category: "Outdoor",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "3.000.000₫",
-    name: "Giày 4DFWD 2",
-    category: "Training",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "2.700.000₫",
-    name: "Giày Predator Accuracy.3",
-    category: "Football",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "5.000.000₫",
-    name: "Giày Crazy 1 ADV",
-    category: "Basketball",
-  },
-  {
-    imgSrc:
-      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
-    price: "3.200.000₫",
-    name: "Giày ZX 8000",
-    category: "Lifestyle",
-  },
+  // DropSet Products
+  ...Array.from({ length: 10 }, (_, index) => ({
+    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_${
+      index + 1
+    }.jpg`,
+    price: `${(3000000 + index * 100000).toLocaleString()}₫`,
+    name: `Giày Dropset ${index + 1}`,
+    category: "DropSet",
+  })),
+
+  // Adizero Products
+  ...Array.from({ length: 10 }, (_, index) => ({
+    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Adizero_${
+      index + 1
+    }.jpg`,
+    price: `${(2200000 + index * 100000).toLocaleString()}₫`,
+    name: `Giày Adizero ${index + 1}`,
+    category: "Adizero",
+  })),
+
+  // New Arrivals Products
+  ...Array.from({ length: 10 }, (_, index) => ({
+    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_New_Arrival_${
+      index + 1
+    }.jpg`,
+    price: `${(3900000 + index * 100000).toLocaleString()}₫`,
+    name: `Giày New Arrival ${index + 1}`,
+    category: "New Arrivals",
+  })),
+
+  // Taekwondo Products
+  ...Array.from({ length: 10 }, (_, index) => ({
+    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Taekwondo_${
+      index + 1
+    }.jpg`,
+    price: `${(2500000 + index * 100000).toLocaleString()}₫`,
+    name: `Giày Taekwondo ${index + 1}`,
+    category: "Taekwondo",
+  })),
 ];
+
+const categories = ["DropSet", "Adizero", "New Arrivals", "Taekwondo"];
+
 const Homepage = () => {
   const increaseCount = useCounterStore((state) => state.increaseCount);
   const count = useCounterStore((state) => state.count);
+
+  // State for currently selected category
+  const [currentCategory, setCurrentCategory] = useState("DropSet");
 
   return (
     <main className="w-full h-full">
@@ -107,18 +75,7 @@ const Homepage = () => {
         </button>
 
         {/* Text Block */}
-        <div
-          className="
-          absolute 
-          bottom-5 left-5 
-          md:bottom-52 md:left-32 
-          md:translate-y-0 md:translate-x-0
-          flex flex-col gap-2 items-start justify-center 
-          text-center 
-          md:items-start md:text-left 
-          md:static md:flex-none
-        "
-        >
+        <div className="absolute bottom-5 left-5 md:bottom-52 md:left-32 flex flex-col gap-2 items-start justify-center text-center md:items-start md:text-left md:static md:flex-none">
           <span className="text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
             MEMBERS GET MORE
           </span>
@@ -127,39 +84,43 @@ const Homepage = () => {
             adiClub Days starting 24 Oct.
           </span>
 
-          {/* Optional: Add buttons for free join and explore */}
           <div className="flex gap-4 mt-2">
             <button className="bg-white text-black px-4 py-2 uppercase w-1/2">
-              Join for free{" "}
-              <span>
-                <TrendingFlatIcon />
-              </span>
+              Join for free <TrendingFlatIcon />
             </button>
             <button className="bg-white text-black border-2 px-4 py-2 uppercase w-1/2">
-              Explore more{" "}
-              <span>
-                <TrendingFlatIcon />
-              </span>
+              Explore more <TrendingFlatIcon />
             </button>
           </div>
         </div>
       </div>
 
       <div>
-        <ul className="flex gap-x-4 w-full bg-white px-5 pb-10  font-[AdihausDIN] text-base font-bold">
-          <li className="p-3 border border-black hover:bg-black hover:text-white">
-            DropSet
-          </li>
-          <li className="p-3 border border-black">Adizero</li>
-          <li className="p-3 border border-black">New Arrivals</li>
-          <li className="p-3 border border-black">Takewondo</li>
-        </ul>
-
-        <ul className="flex gap-x-2 overflow-x-auto w-full py-2 bg-slate-200 px-5 min-h-fit flex-nowrap">
-          {products.map((product, index) => (
-            <ProductCard key={index} {...product} />
+        {/* Categories Navigation */}
+        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold">
+          {categories.map((category) => (
+            <li
+              key={category}
+              className={`p-3 border border-black hover:bg-black hover:text-white cursor-pointer ${
+                currentCategory === category ? "bg-black text-white" : ""
+              }`}
+              onClick={() => setCurrentCategory(category)} // Handle category change
+            >
+              {category}
+            </li>
           ))}
         </ul>
+
+        {/* Products for the currently selected category */}
+        <div>
+          <ul className="flex gap-x-2 overflow-x-auto w-full py-2  px-5 min-h-fit flex-nowrap">
+            {products
+              .filter((product) => product.category === currentCategory)
+              .map((product, index) => (
+                <ProductCard key={index} {...product} />
+              ))}
+          </ul>
+        </div>
 
         <div className="w-full h-96 bg-yellow-50"></div>
       </div>
