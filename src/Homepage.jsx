@@ -1,6 +1,20 @@
 import React from "react";
 import useCounterStore from "shell/counterStore";
 import TrendingFlatIcon from "@mui/icons-material/TrendingFlat";
+
+import ProductCard from "./Components/ProductCard";
+
+const products = [
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "3.500.000₫",
+    name: "Giày Dropset 3",
+    category: "Performance",
+  },
+  // Add more products as needed
+];
+
 const Homepage = () => {
   const increaseCount = useCounterStore((state) => state.increaseCount);
   const count = useCounterStore((state) => state.count);
@@ -76,10 +90,7 @@ const Homepage = () => {
         <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-5 flex-nowrap">
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
             (_, index) => (
-              <div
-                key={index}
-                className="h-96 min-w-[18rem] bg-yellow-600 flex-shrink-0"
-              ></div>
+              <ProductCard key={index} {...products} />
             )
           )}
         </ul>
