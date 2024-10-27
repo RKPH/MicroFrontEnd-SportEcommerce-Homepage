@@ -11,7 +11,7 @@ import {
 
 const ProductCard = ({ imgSrc, price, name, category }) => {
   return (
-    <Card className="h-96 min-w-[18rem] flex-shrink-0 mx-auto shadow-md rounded-lg border">
+    <Card className="flex-shrink-0 mx-auto shadow-md rounded-lg border">
       <div className="relative">
         <CardMedia
           component="img"
