@@ -74,7 +74,7 @@ const Homepage = () => {
         </ul>
 
         <ul className="flex gap-x-2 overflow-x-auto  w-full bg-slate-200 px-2">
-          {[1, 1, 1, 1, 1, 1, 1].map((_, index) => (
+          {[1, 1, 1, 1, 1, 1, 1,1,1,1,1,1,1,1,1,1,1,1].map((_, index) => (
             <div key={index} className="h-96 w-72 bg-yellow-600"></div>
           ))}
         </ul>
