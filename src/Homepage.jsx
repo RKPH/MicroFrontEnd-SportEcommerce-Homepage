@@ -112,8 +112,8 @@ const Homepage = () => {
         </ul>
 
         {/* Products for the currently selected category */}
-        <div>
-          <ul className="flex gap-x-2 overflow-x-auto w-full py-2  px-5 min-h-fit flex-nowrap">
+        <div className="flex w-full items-center justify-center ">
+          <ul className="flex gap-x-2 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
             {products
               .filter((product) => product.category === currentCategory)
               .map((product, index) => (
