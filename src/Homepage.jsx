@@ -73,7 +73,7 @@ const Homepage = () => {
           <li className="p-3 border border-black">Takewondo</li>
         </ul>
 
-        <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-2 flex-nowrap">
+        <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-5 flex-nowrap">
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
             (_, index) => (
               <div
