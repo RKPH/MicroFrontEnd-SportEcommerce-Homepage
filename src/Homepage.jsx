@@ -12,9 +12,77 @@ const products = [
     name: "Giày Dropset 3",
     category: "Performance",
   },
-  // Add more products as needed
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "2.200.000₫",
+    name: "Giày Adizero SL",
+    category: "Running",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "3.900.000₫",
+    name: "Giày Ultraboost Light",
+    category: "Lifestyle",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "2.500.000₫",
+    name: "Giày NMD R1 V2",
+    category: "Originals",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "1.800.000₫",
+    name: "Giày Forum Low",
+    category: "Originals",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "2.800.000₫",
+    name: "Giày Supernova",
+    category: "Running",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "4.500.000₫",
+    name: "Giày Terrex Swift R3 GTX",
+    category: "Outdoor",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "3.000.000₫",
+    name: "Giày 4DFWD 2",
+    category: "Training",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "2.700.000₫",
+    name: "Giày Predator Accuracy.3",
+    category: "Football",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "5.000.000₫",
+    name: "Giày Crazy 1 ADV",
+    category: "Basketball",
+  },
+  {
+    imgSrc:
+      "https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Giay_Dropset_3_trang_ID8635_02_standard_hover.jpg",
+    price: "3.200.000₫",
+    name: "Giày ZX 8000",
+    category: "Lifestyle",
+  },
 ];
-
 const Homepage = () => {
   const increaseCount = useCounterStore((state) => state.increaseCount);
   const count = useCounterStore((state) => state.count);
@@ -88,11 +156,9 @@ const Homepage = () => {
         </ul>
 
         <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-5 flex-nowrap">
-          {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
-            (_, index) => (
-              <ProductCard key={index} {...products} />
-            )
-          )}
+          {products.map((product, index) => (
+            <ProductCard key={index} {...product} />
+          ))}
         </ul>
       </div>
     </main>
