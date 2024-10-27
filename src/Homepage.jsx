@@ -73,10 +73,15 @@ const Homepage = () => {
           <li className="p-3 border border-black">Takewondo</li>
         </ul>
 
-        <ul className="flex gap-x-2 overflow-x-auto  w-full bg-slate-200 px-2">
-          {[1, 1, 1, 1, 1, 1, 1,1,1,1,1,1,1,1,1,1,1,1].map((_, index) => (
-            <div key={index} className="h-96 w-72 bg-yellow-600"></div>
-          ))}
+        <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-2 flex-nowrap">
+          {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map(
+            (_, index) => (
+              <div
+                key={index}
+                className="h-96 min-w-[18rem] bg-yellow-600 flex-shrink-0"
+              ></div>
+            )
+          )}
         </ul>
       </div>
     </main>
