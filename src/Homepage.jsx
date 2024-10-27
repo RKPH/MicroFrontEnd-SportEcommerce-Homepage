@@ -85,10 +85,10 @@ const Homepage = () => {
           </span>
 
           <div className="flex gap-4 mt-2">
-            <button className="bg-white text-black px-4 py-2 uppercase w-1/2">
+            <button className="bg-white text-black px-4 py-2 uppercase">
               Join for free <TrendingFlatIcon />
             </button>
-            <button className="bg-white text-black border-2 px-4 py-2 uppercase w-1/2">
+            <button className="bg-white text-black border-2 px-4 py-2 uppercase ">
               Explore more <TrendingFlatIcon />
             </button>
           </div>
