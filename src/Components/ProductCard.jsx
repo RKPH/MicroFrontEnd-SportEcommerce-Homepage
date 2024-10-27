@@ -15,7 +15,7 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
       <div className="relative">
         <CardMedia
           component="img"
-          height="140"
+          height="60"
           image={imgSrc}
           alt={name}
           className="object-contain bg-gray-100"
