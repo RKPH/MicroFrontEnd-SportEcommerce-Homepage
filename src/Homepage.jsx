@@ -155,11 +155,13 @@ const Homepage = () => {
           <li className="p-3 border border-black">Takewondo</li>
         </ul>
 
-        <ul className="flex gap-x-2 overflow-x-auto w-full bg-slate-200 px-5 flex-nowrap">
+        <ul className="flex gap-x-2 overflow-x-auto w-full py-2 bg-slate-200 px-5 min-h-fit flex-nowrap">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
         </ul>
+
+        <div className="w-full h-96 bg-yellow-50"></div>
       </div>
     </main>
   );

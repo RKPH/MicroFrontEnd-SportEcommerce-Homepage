@@ -1,43 +1,41 @@
 // ProductCard.jsx
 import PropTypes from "prop-types";
 import { FavoriteBorder } from "@mui/icons-material";
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Card, IconButton, Typography } from "@mui/material";
 
 const ProductCard = ({ imgSrc, price, name, category }) => {
   return (
-    <Card className="flex-shrink-0 mx-auto shadow-md rounded-lg border">
-      <div className="relative">
-        <CardMedia
-          component="img"
-          height="60"
-          image={imgSrc}
+    <Card className="flex-shrink-0 w-72 h-96 shadow-sm rounded-md border overflow-hidden">
+      {/* Product Image */}
+      <div className="relative h-3/4">
+        <img
+          src={imgSrc}
           alt={name}
-          className="object-contain bg-gray-100"
+          className="object-cover bg-gray-100 h-full w-full"
         />
         <IconButton
-          className="absolute top-2 right-2 bg-white shadow-md"
+          className="absolute top-1 right-1 bg-white shadow-md p-1"
           aria-label="favorite"
         >
-          <FavoriteBorder />
+          <FavoriteBorder fontSize="small" />
         </IconButton>
       </div>
-      <CardContent className="p-4 text-center">
-        <Typography variant="h6" className="text-lg font-semibold mb-2">
+
+      {/* Product Content */}
+      <div className="p-1 text-center h-1/4 flex flex-col justify-between">
+        <Typography variant="h6" className="text-sm font-medium mb-1 truncate">
           {price}
         </Typography>
-        <Typography variant="body1" className="text-sm text-gray-600 mb-1">
+        <Typography
+          variant="body1"
+          className="text-xs text-gray-800 mb-1 truncate"
+        >
           {name}
         </Typography>
         <Typography variant="body2" className="text-xs text-gray-500">
           {category}
         </Typography>
-      </CardContent>
+      </div>
     </Card>
   );
 };
