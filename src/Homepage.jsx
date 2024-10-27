@@ -47,13 +47,13 @@ const Homepage = () => {
 
           {/* Optional: Add buttons for free join and explore */}
           <div className="flex gap-4 mt-2">
-            <button className="bg-white text-black px-4 py-2 uppercase W-1/2">
+            <button className="bg-white text-black px-4 py-2 uppercase w-1/2">
               Join for free{" "}
               <span>
                 <TrendingFlatIcon />
               </span>
             </button>
-            <button className="bg-white text-black border-2 px-4 py-2 uppercase W-1/2">
+            <button className="bg-white text-black border-2 px-4 py-2 uppercase w-1/2">
               Explore more{" "}
               <span>
                 <TrendingFlatIcon />
