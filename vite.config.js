@@ -1,22 +1,29 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
+import tailwindcss from "tailwindcss";
+import autoprefixer from "autoprefixer";
 
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "homepage",
+      name: "ProductPages",
       filename: "remoteEntry.js",
       exposes: {
-        "./HomePage": "./src/Homepage.jsx", // Ensure the file name matches exactly
+        "./MenPage": "./src/Pages/MenPage.jsx",
+        "./WomenPage": "./src/Pages/WomenPage.jsx",
+        "./KidsPage": "./src/Pages/KidsPage.jsx",
       },
-      remotes: {
-        shell: "https://micro-frontend-shell.vercel.app/assets/remoteEntry.js", // Use Shell's remote entry
-      },
-      shared: ["react", "react-dom"], // Shared dependencies
+      shared: ["react", "react-dom"],
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [tailwindcss(), autoprefixer()],
+    },
+  },
   build: {
     target: "esnext",
     minify: false,
