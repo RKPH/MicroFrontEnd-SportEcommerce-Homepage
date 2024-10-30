@@ -55,7 +55,7 @@ const Homepage = () => {
   return (
     <main className="w-full h-full">
       {/* Hero banner */}
-<div className="relative w-full max-h-screen">
+<div className="relative w-full h-1/2">
   <picture>
     <img
       src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
