@@ -57,7 +57,37 @@ const Homepage = () => {
 
   return (
     <main className="w-full h-full">
-      {/* Hero banner */}
+      {/* list 1 */}
+      <div className="w-full my-2">
+        {/* Categories Navigation */}
+        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
+          {categories.map((category) => (
+            <li
+              key={category}
+              className={`p-3 border border-black hover:bg-black hover:text-white cursor-pointer ${
+                currentCategory === category ? "bg-black text-white" : ""
+              }`}
+              onClick={() => setCurrentCategory(category)} // Handle category change
+            >
+              {category}
+            </li>
+          ))}
+        </ul>
+
+        {/* Products for the currently selected category */}
+        <div className="flex w-full items-center justify-center ">
+          <ul className="flex gap-x-2 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
+            {products
+              .filter((product) => product.category === currentCategory)
+              .map((product, index) => (
+                <ProductCard key={index} {...product} />
+              ))}
+          </ul>
+        </div>
+
+        <div className="w-full h-96 bg-yellow-50"></div>
+      </div>
+      {/* list 2 */}
       <div className="w-full my-2">
         {/* Categories Navigation */}
         <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
