@@ -57,24 +57,6 @@ const Homepage = () => {
       {/* Hero banner */}
 <div className="relative w-full max-h-screen">
   <picture>
-    <source
-      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
-      media="(min-width: 960px)"
-      width="2880"
-      height="1280"
-    />
-    <source
-      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/Homepage_banner_hero_alt_spec_generic_asset_t_2_850f353268.jpg"
-      media="(min-width: 768px)"
-      width="1600"
-      height="1600"
-    />
-    <source
-      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_768,w_768/Homepage_banner_hero_alt_spec_generic_asset_m_2_75e7a6a5b0.jpg"
-      media="(max-width: 767px)"
-      width="750"
-      height="964"
-    />
     <img
       src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
       alt="Banner Image"
