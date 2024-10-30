@@ -55,50 +55,66 @@ const Homepage = () => {
   return (
     <main className="w-full h-full">
       {/* Hero banner */}
-      <div className="relative w-full max-h-screen">
-        <picture>
-  <source
-    srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
-    media="(min-width: 960px)"
-  />
-  <img
-    src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
-    alt="Fallback Banner"
-    className="w-full h-full object-cover"
-  />
-</picture>
+<div className="relative w-full max-h-screen">
+  <picture>
+    <source
+      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
+      media="(min-width: 960px)"
+      width="2880"
+      height="1280"
+    />
+    <source
+      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/Homepage_banner_hero_alt_spec_generic_asset_t_2_850f353268.jpg"
+      media="(min-width: 768px)"
+      width="1600"
+      height="1600"
+    />
+    <source
+      srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_768,w_768/Homepage_banner_hero_alt_spec_generic_asset_m_2_75e7a6a5b0.jpg"
+      media="(max-width: 767px)"
+      width="750"
+      height="964"
+    />
+    <img
+      src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
+      alt="Banner Image"
+      loading="eager"
+      fetchpriority="high"
+      className="absolute inset-0 w-full h-full object-cover"
+    />
+  </picture>
 
+  <button
+    className="border-black border-2 px-3 py-1 sm:px-4 sm:py-2 absolute top-4 left-4 sm:top-5 sm:left-5"
+    onClick={() => {
+      console.log("Increase Count Called");
+      increaseCount();
+    }}
+  >
+    Count +1
+  </button>
 
-        <button
-          className="border-black border-2 px-3 py-1 sm:px-4 sm:py-2 absolute top-4 left-4 sm:top-5 sm:left-5"
-          onClick={() => {
-            console.log("Increase Count Called");
-            increaseCount();
-          }}
-        >
-          Count +1
-        </button>
+  {/* Text Block */}
+  <div className="absolute bottom-8 left-4 sm:bottom-12 sm:left-8 md:bottom-1/4 md:left-1/4 flex flex-col gap-1 sm:gap-2 items-start justify-center text-left">
+    <span className="text-sm sm:text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
+      MEMBERS GET MORE
+    </span>
+    <span className="text-xs sm:text-sm md:text-base tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[250px] sm:max-w-[300px] md:max-w-[350px]">
+      Join adiClub for exclusive products, events, and prize draws during
+      adiClub Days starting 24 Oct.
+    </span>
 
-        {/* Text Block */}
-        <div className="absolute bottom-8 left-4 sm:bottom-12 sm:left-8 md:bottom-1/4 md:left-1/4 flex flex-col gap-1 sm:gap-2 items-start justify-center text-left">
-          <span className="text-sm sm:text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
-            MEMBERS GET MORE
-          </span>
-          <span className="text-xs sm:text-sm md:text-base tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[250px] sm:max-w-[300px] md:max-w-[350px]">
-            Join adiClub for exclusive products, events, and prize draws during
-            adiClub Days starting 24 Oct.
-          </span>
+    <div className="flex gap-3 mt-1 sm:gap-4 sm:mt-2">
+      <button className="bg-white text-black px-3 py-1 sm:px-4 sm:py-2 uppercase">
+        Join for free <TrendingFlatIcon />
+      </button>
+      <button className="bg-white text-black border-2 px-3 py-1 sm:px-4 sm:py-2 uppercase">
+        Explore more <TrendingFlatIcon />
+      </button>
+    </div>
+  </div>
+</div>
 
-          <div className="flex gap-3 mt-1 sm:gap-4 sm:mt-2">
-            <button className="bg-white text-black px-3 py-1 sm:px-4 sm:py-2 uppercase">
-              Join for free <TrendingFlatIcon />
-            </button>
-            <button className="bg-white text-black border-2 px-3 py-1 sm:px-4 sm:py-2 uppercase">
-              Explore more <TrendingFlatIcon />
-            </button>
-          </div>
-        </div>
-      </div>
 
       <div>
         {/* Categories Navigation */}
