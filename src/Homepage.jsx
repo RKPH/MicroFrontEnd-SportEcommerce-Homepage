@@ -57,74 +57,98 @@ const Homepage = () => {
 
   return (
     <main className="w-full h-full">
-      {/* Hero banner */}
-      <div
-        className="w-full min-h-[870px] bg-contain bg-no-repeat relative"
-        style={{
-          backgroundImage: `url("https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_1_01e19778e1.jpg")`,
-        }}
-      >
-        <button
-          className="border-black border-2 px-4 py-2 absolute top-5 left-5"
-          onClick={() => {
-            console.log("Increase Count Called");
-            increaseCount();
-          }}
-        >
-          Count +1
+  {/* Hero banner */}
+  <div className="relative w-full max-h-screen">
+    <picture>
+      <source
+        srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
+        media="(min-width: 960px)"
+        width="2880"
+        height="1280"
+      />
+      <source
+        srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/Homepage_banner_hero_alt_spec_generic_asset_t_2_850f353268.jpg"
+        media="(min-width: 768px)"
+        width="1600"
+        height="1600"
+      />
+      <source
+        srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_768,w_768/Homepage_banner_hero_alt_spec_generic_asset_m_2_75e7a6a5b0.jpg"
+        media="(max-width: 767px)"
+        width="750"
+        height="964"
+      />
+      <img
+        src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/Homepage_banner_hero_alt_spec_generic_asset_d_2_2f0d619960.jpg"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    </picture>
+
+    <button
+      className="border-black border-2 px-3 py-1 sm:px-4 sm:py-2 absolute top-4 left-4 sm:top-5 sm:left-5"
+      onClick={() => {
+        console.log("Increase Count Called");
+        increaseCount();
+      }}
+    >
+      Count +1
+    </button>
+
+    {/* Text Block */}
+    <div className="absolute bottom-8 left-4 sm:bottom-12 sm:left-8 md:bottom-1/4 md:left-1/4 flex flex-col gap-1 sm:gap-2 items-start justify-center text-left">
+      <span className="text-sm sm:text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
+        MEMBERS GET MORE
+      </span>
+      <span className="text-xs sm:text-sm md:text-base tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[250px] sm:max-w-[300px] md:max-w-[350px]">
+        Join adiClub for exclusive products, events, and prize draws during
+        adiClub Days starting 24 Oct.
+      </span>
+
+      <div className="flex gap-3 mt-1 sm:gap-4 sm:mt-2">
+        <button className="bg-white text-black px-3 py-1 sm:px-4 sm:py-2 uppercase">
+          Join for free <TrendingFlatIcon />
         </button>
-
-        {/* Text Block */}
-        <div className="absolute bottom-5 left-5 md:bottom-52 md:left-32 flex flex-col gap-2 items-start justify-center text-center md:items-start md:text-left md:static md:flex-none">
-          <span className="text-lg tracking-wide font-[AdihausDIN] uppercase font-bold text-black bg-white px-2 py-1">
-            MEMBERS GET MORE
-          </span>
-          <span className="text-sm tracking-wide font-[AdihausDIN] text-black bg-white px-2 py-1 max-w-[350px] text-wrap">
-            Join adiClub for exclusive products, events, and prize draws during
-            adiClub Days starting 24 Oct.
-          </span>
-
-          <div className="flex gap-4 mt-2">
-            <button className="bg-white text-black px-4 py-2 uppercase">
-              Join for free <TrendingFlatIcon />
-            </button>
-            <button className="bg-white text-black border-2 px-4 py-2 uppercase ">
-              Explore more <TrendingFlatIcon />
-            </button>
-          </div>
-        </div>
+        <button className="bg-white text-black border-2 px-3 py-1 sm:px-4 sm:py-2 uppercase">
+          Explore more <TrendingFlatIcon />
+        </button>
       </div>
+    </div>
+  </div>
 
-      <div>
-        {/* Categories Navigation */}
-        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold">
-          {categories.map((category) => (
-            <li
-              key={category}
-              className={`p-3 border border-black hover:bg-black hover:text-white cursor-pointer ${
-                currentCategory === category ? "bg-black text-white" : ""
-              }`}
-              onClick={() => setCurrentCategory(category)} // Handle category change
-            >
-              {category}
-            </li>
+  <div>
+    {/* Categories Navigation */}
+    <ul className="flex gap-x-2 sm:gap-x-4 w-full bg-white px-4 sm:px-5 font-[AdihausDIN] text-sm sm:text-base font-bold">
+      {categories.map((category) => (
+        <li
+          key={category}
+          className={`p-2 sm:p-3 border border-black hover:bg-black hover:text-white cursor-pointer ${
+            currentCategory === category ? "bg-black text-white" : ""
+          }`}
+          onClick={() => setCurrentCategory(category)} // Handle category change
+        >
+          {category}
+        </li>
+      ))}
+    </ul>
+
+    {/* Products for the currently selected category */}
+    <div className="flex w-full items-center justify-center ">
+      <ul className="flex gap-x-2 overflow-x-auto w-[98%] py-2 min-h-fit flex-nowrap">
+        {products
+          .filter((product) => product.category === currentCategory)
+          .map((product, index) => (
+            <ProductCard key={index} {...product} />
           ))}
-        </ul>
+      </ul>
+    </div>
 
-        {/* Products for the currently selected category */}
-        <div className="flex w-full items-center justify-center ">
-          <ul className="flex gap-x-2 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
-            {products
-              .filter((product) => product.category === currentCategory)
-              .map((product, index) => (
-                <ProductCard key={index} {...product} />
-              ))}
-          </ul>
-        </div>
+    <div className="w-full h-80 sm:h-96 bg-yellow-50"></div>
+  </div>
+</main>
 
-        <div className="w-full h-96 bg-yellow-50"></div>
-      </div>
-    </main>
   );
 };
 
