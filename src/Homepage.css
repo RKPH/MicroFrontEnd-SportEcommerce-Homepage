@@ -4,7 +4,7 @@
 
 /* Target horizontal scrollbar */
 .custom-scrollbar::-webkit-scrollbar {
-  height: 3px; /* Adjust height for horizontal scrollbar */
+  height: 8px; /* Adjust height for horizontal scrollbar */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
