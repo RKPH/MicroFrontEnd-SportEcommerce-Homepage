@@ -5,9 +5,9 @@ import { Card, IconButton, Typography } from "@mui/material";
 
 const ProductCard = ({ imgSrc, price, name, category }) => {
   return (
-    <Card className="flex-shrink-0 w-72 h-96 shadow-sm rounded-md border overflow-hidden">
+    <Card className="flex-shrink-0 w-72 shadow-sm rounded-md border overflow-hidden">
       {/* Product Image */}
-      <div className="relative h-5/6">
+      <div className="relative aspect-square">
         <img
           src={imgSrc}
           alt={name}
@@ -16,12 +16,12 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
       </div>
 
       {/* Product Content */}
-      <div className="p-1 px-3 text-left h-1/6 flex flex-col justify-between">
-        <span className="text-base font-medium my-1 truncate">{price}</span>
-        <span className="text-base text-gray-800 my-1 truncate font-bold">
+      <div className="p-1 px-3 text-left flex flex-col space-y-1">
+        <span className="text-base font-medium truncate">{price}</span>
+        <span className="text-base text-gray-800 font-bold truncate">
           {name}
         </span>
-        <span className="text-sm text-gray-500 my-1">{category}</span>
+        <span className="text-sm text-gray-500">{category}</span>
       </div>
     </Card>
   );
