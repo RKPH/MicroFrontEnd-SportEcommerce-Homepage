@@ -60,7 +60,7 @@ const Homepage = () => {
       {/* list 1 */}
       <div className="w-full my-2">
         {/* Categories Navigation */}
-        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
+        <ul className="flex gap-x-6 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
           {categories.map((category) => (
             <li
               key={category}
