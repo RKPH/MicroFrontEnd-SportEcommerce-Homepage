@@ -13,16 +13,10 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
           alt={name}
           className="object-cover bg-gray-100 h-full w-full"
         />
-        <IconButton
-          className="absolute top-1 right-1 bg-white shadow-md p-1"
-          aria-label="favorite"
-        >
-          <FavoriteBorder fontSize="small" />
-        </IconButton>
       </div>
 
       {/* Product Content */}
-      <div className="p-1 text-center h-1/4 flex flex-col justify-between">
+      <div className="p-1 text-left h-1/4 flex flex-col justify-between">
         <Typography variant="h6" className="text-sm font-medium mb-1 truncate">
           {price}
         </Typography>
