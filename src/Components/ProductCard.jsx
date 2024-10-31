@@ -16,7 +16,7 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
       </div>
 
       {/* Product Content */}
-      <div className="p-1 text-left h-1/4 flex flex-col justify-between">
+      <div className="p-1 px-3 text-left h-1/4 flex flex-col justify-between">
         <Typography variant="h6" className="text-sm font-medium mb-1 truncate">
           {price}
         </Typography>
