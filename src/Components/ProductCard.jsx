@@ -17,9 +17,11 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
 
       {/* Product Content */}
       <div className="p-1 px-3 text-left h-1/6 flex flex-col justify-between">
-        <span className="text-sm font-medium mb-1 truncate">{price}</span>
-        <span className="text-xs text-gray-800 mb-1 truncate">{name}</span>
-        <span className="text-xs text-gray-500">{category}</span>
+        <span className="text-base font-medium my-1 truncate">{price}</span>
+        <span className="text-base text-gray-800 my-1 truncate font-bold">
+          {name}
+        </span>
+        <span className="text-sm text-gray-500 my-1">{category}</span>
       </div>
     </Card>
   );
