@@ -17,18 +17,9 @@ const ProductCard = ({ imgSrc, price, name, category }) => {
 
       {/* Product Content */}
       <div className="p-1 px-3 text-left h-1/4 flex flex-col justify-between">
-        <Typography variant="h6" className="text-sm font-medium mb-1 truncate">
-          {price}
-        </Typography>
-        <Typography
-          variant="body1"
-          className="text-xs text-gray-800 mb-1 truncate"
-        >
-          {name}
-        </Typography>
-        <Typography variant="body2" className="text-xs text-gray-500">
-          {category}
-        </Typography>
+        <span className="text-sm font-medium mb-1 truncate">{price}</span>
+        <span className="text-xs text-gray-800 mb-1 truncate">{name}</span>
+        <span className="text-xs text-gray-500">{category}</span>
       </div>
     </Card>
   );
