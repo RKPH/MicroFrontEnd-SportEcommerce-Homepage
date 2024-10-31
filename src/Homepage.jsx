@@ -85,7 +85,7 @@ const Homepage = () => {
           </ul>
         </div>
 
-        <div className="w-full h-96 bg-yellow-50"></div>
+       
       </div>
       {/* list 2 */}
       <div className="w-full my-2">
@@ -115,7 +115,7 @@ const Homepage = () => {
           </ul>
         </div>
 
-        <div className="w-full h-96 bg-yellow-50"></div>
+        
       </div>
     </main>
   );
