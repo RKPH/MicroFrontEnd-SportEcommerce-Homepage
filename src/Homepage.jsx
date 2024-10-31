@@ -52,9 +52,12 @@ const Homepage = () => {
   const increaseCount = useCounterStore((state) => state.increaseCount);
   const count = useCounterStore((state) => state.count);
   const [currentCategories, setCurrentCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(""); // State for selected category
 
   useEffect(() => {
-    setCurrentCategories(getRandomCategories(categories, 4));
+    const initialCategories = getRandomCategories(categories, 4);
+    setCurrentCategories(initialCategories);
+    setSelectedCategory(initialCategories[0]); // Set default selected category
   }, []);
 
   return (
@@ -65,18 +68,23 @@ const Homepage = () => {
           {currentCategories.map((category) => (
             <li
               key={category}
-              className="p-3 border border-black hover:bg-black hover:text-white cursor-pointer"
+              className={`p-3 border border-black cursor-pointer ${
+                selectedCategory === category
+                  ? "bg-black text-white"
+                  : "hover:bg-black hover:text-white"
+              }`}
+              onClick={() => setSelectedCategory(category)} // Update selected category on click
             >
               {category}
             </li>
           ))}
         </ul>
 
-        {/* Products for the currently selected categories */}
+        {/* Products for the currently selected category */}
         <div className="flex w-full items-center justify-center mt-2">
           <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2 min-h-fit flex-nowrap custom-scrollbar">
             {products
-              .filter((product) => currentCategories.includes(product.category))
+              .filter((product) => product.category === selectedCategory) // Filter based on selected category
               .map((product, index) => (
                 <ProductCard key={index} {...product} />
               ))}
