@@ -49,7 +49,7 @@ const Homepage = () => {
 
         {/* Products for the currently selected category */}
         <div className="flex w-full items-center justify-center mt-2">
-          <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2 min-h-fit flex-nowrap">
+          <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2 min-h-fit flex-nowrap custom-scrollbar">
             {products
               .filter((product) => product.category === currentCategory)
               .map((product, index) => (
