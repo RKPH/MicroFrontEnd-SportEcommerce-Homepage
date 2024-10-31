@@ -7,18 +7,6 @@ const bannerUrl =
   "https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/4894144_CAM_Onsite_FW_24_Lo_Profile_Incubation_Hoyeon_1_Oct_SEA_CLP_GLP_Masthead_Banner_DT_2880x1280px_456b1f8c70.jpg";
 
 // Sample product data with multiple categories
-const products = [
-  // Example product data (the full dataset should be added here)
-  ...Array.from({ length: 40 }, (_, index) => ({
-    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
-      index + 1
-    }.jpg`,
-    price: `${(3000000 + index * 100000).toLocaleString()}₫`,
-    name: `Giày Product ${index + 1}`,
-    category: `Category ${Math.ceil((index + 1) / 2)}`, // Create categories dynamically
-  })),
-];
-
 const categories = [
   "DropSet",
   "Adizero",
@@ -41,6 +29,19 @@ const categories = [
   "Accessories",
   "Apparel",
 ];
+
+const products = Array.from({ length: 40 }, (_, index) => {
+  const randomCategory =
+    categories[Math.floor(Math.random() * categories.length)];
+  return {
+    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
+      index + 1
+    }.jpg`,
+    price: `${(3000000 + index * 100000).toLocaleString()}₫`,
+    name: `Giày Product ${index + 1}`,
+    category: randomCategory, // Randomly assign a category from the categories array
+  };
+});
 
 const getRandomCategories = (categories, count) => {
   const shuffled = [...categories].sort(() => 0.5 - Math.random());
