@@ -62,7 +62,7 @@ const Homepage = () => {
       <div className="w-full h-auto bg-cover bg-center my-2">
         <img
           src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_1920,w_1920/4894144_CAM_Onsite_FW_24_Lo_Profile_Incubation_Hoyeon_1_Oct_SEA_CLP_GLP_Masthead_Banner_DT_2880x1280px_456b1f8c70.jpg"
-          className="w-full h-[500px] object-contain"
+          className="w-full h-[500px] "
         />
       </div>
 
