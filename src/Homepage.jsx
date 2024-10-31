@@ -60,7 +60,7 @@ const Homepage = () => {
       {/* list 1 */}
       <div className="w-full my-2">
         {/* Categories Navigation */}
-        <ul className="flex gap-x-6 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
+        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold ">
           {categories.map((category) => (
             <li
               key={category}
@@ -76,7 +76,7 @@ const Homepage = () => {
 
         {/* Products for the currently selected category */}
         <div className="flex w-full items-center justify-center ">
-          <ul className="flex gap-x-2 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
+          <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
             {products
               .filter((product) => product.category === currentCategory)
               .map((product, index) => (
