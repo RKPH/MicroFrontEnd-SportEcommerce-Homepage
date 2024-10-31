@@ -75,7 +75,7 @@ const Homepage = () => {
         </ul>
 
         {/* Products for the currently selected category */}
-        <div className="flex w-full items-center justify-center ">
+        <div className="flex w-full items-center justify-center mt-2">
           <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2    min-h-fit flex-nowrap">
             {products
               .filter((product) => product.category === currentCategory)
