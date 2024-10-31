@@ -30,18 +30,25 @@ const categories = [
   "Apparel",
 ];
 
-const products = Array.from({ length: 40 }, (_, index) => {
-  const randomCategory =
-    categories[Math.floor(Math.random() * categories.length)];
-  return {
-    imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
-      index + 1
-    }.jpg`,
-    price: `${(3000000 + index * 100000).toLocaleString()}₫`,
-    name: `Giày Product ${index + 1}`,
-    category: randomCategory, // Randomly assign a category from the categories array
-  };
-});
+// Ensure that we have enough products in each category
+const generateProducts = (categories) => {
+  const products = [];
+  for (let i = 0; i < 20; i++) {
+    // Create 20 products per category
+    const category = categories[i % categories.length];
+    products.push({
+      imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
+        i + 1
+      }.jpg`,
+      price: `${(3000000 + i * 100000).toLocaleString()}₫`,
+      name: `Giày Product ${i + 1}`,
+      category: category,
+    });
+  }
+  return products;
+};
+
+const products = generateProducts(categories); // Generate products
 
 const getRandomCategories = (categories, count) => {
   const shuffled = [...categories].sort(() => 0.5 - Math.random());
