@@ -33,8 +33,8 @@ const categories = [
 // Ensure that we have enough products in each category
 const generateProducts = (categories) => {
   const products = [];
-  for (let i = 0; i < 20; i++) {
-    // Create 20 products per category
+  for (let i = 0; i < 200; i++) {
+    // Create 200 products total
     const category = categories[i % categories.length];
     products.push({
       imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
