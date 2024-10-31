@@ -85,6 +85,7 @@ const Homepage = () => {
           <ul className="flex gap-x-4 overflow-x-auto w-[98%] py-2 min-h-fit flex-nowrap custom-scrollbar">
             {products
               .filter((product) => product.category === selectedCategory) // Filter based on selected category
+              .slice(0, 10) // Limit to 10 products
               .map((product, index) => (
                 <ProductCard key={index} {...product} />
               ))}
