@@ -33,18 +33,29 @@ const categories = [
 // Ensure that we have enough products in each category
 const generateProducts = (categories) => {
   const products = [];
+  const categoryCount = {}; // Track count for each category
+
   for (let i = 0; i < 200; i++) {
-    // Create 200 products total
     const category = categories[i % categories.length];
+
+    // Initialize the count for this category if not already done
+    if (!categoryCount[category]) {
+      categoryCount[category] = 1;
+    }
+
     products.push({
       imgSrc: `https://assets.adidas.com/images/w_600,f_auto,q_auto/35c5e1c3d7cc45e49dcebd495d9c9198_9366/Product_${
         i + 1
       }.jpg`,
       price: `${(3000000 + i * 100000).toLocaleString()}₫`,
-      name: `Giày ${category + " " + i + 1}`,
+      name: `Giày ${category} ${categoryCount[category]}`,
       category: category,
     });
+
+    // Increment the count for this category
+    categoryCount[category]++;
   }
+
   return products;
 };
 
