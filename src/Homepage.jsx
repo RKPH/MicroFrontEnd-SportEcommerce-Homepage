@@ -41,7 +41,7 @@ const generateProducts = (categories) => {
         i + 1
       }.jpg`,
       price: `${(3000000 + i * 100000).toLocaleString()}₫`,
-      name: `Giày ${category + i + 1}`,
+      name: `Giày ${category + "" + i + 1}`,
       category: category,
     });
   }
