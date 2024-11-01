@@ -5,7 +5,7 @@ import { Card, IconButton, Typography } from "@mui/material";
 
 const ProductCard = ({ imgSrc, price, name, category }) => {
   return (
-    <Card className="flex-shrink-0 w-72 shadow-sm rounded-md border overflow-hidden">
+    <Card className="flex-shrink-0 w-72  rounded-md border overflow-hidden hover:border-black mb-2 shadow-none">
       {/* Product Image */}
       <div className="relative aspect-square">
         <img
