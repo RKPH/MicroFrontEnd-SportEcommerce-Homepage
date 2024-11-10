@@ -79,7 +79,7 @@ const Homepage = () => {
   return (
     <main className="w-full h-full">
       <div className="w-full my-2">
-        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold">
+        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold z-20">
           {currentCategories.map((category) => (
             <li
               key={category}
