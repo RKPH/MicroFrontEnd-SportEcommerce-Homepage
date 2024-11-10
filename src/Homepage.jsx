@@ -83,7 +83,7 @@ const Homepage = () => {
           {currentCategories.map((category) => (
             <li
               key={category}
-              className={`p-3 border border-black cursor-pointer ${
+              className={`p-3 border z-20 border-black cursor-pointer ${
                 selectedCategory === category
                   ? "bg-black text-white"
                   : "hover:bg-black hover:text-white"
