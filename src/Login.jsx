@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import logo from "../public/logo.png";
 export function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisibility = () => setPasswordShown((cur) => !cur);
@@ -12,6 +12,11 @@ export function Login() {
       }}
     >
       <div className="w-full flex justify-center text-center items-center mb-8">
+        <img
+          src={logo}
+          alt="Logo"
+          className="h-12 mb-4" // Adjust height as needed
+        />
         <span className="text-2xl text-black font-bold">
           Welcome to sport ecommerce
         </span>
