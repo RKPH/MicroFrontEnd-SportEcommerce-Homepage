@@ -12,7 +12,7 @@ export function Login() {
       }}
     >
       <div className="w-full flex justify-center text-center items-center mb-8">
-        <span className="text-lg text-black font-bold">
+        <span className="text-2xl text-black font-bold">
           Welcome to sport ecommerce
         </span>
       </div>
