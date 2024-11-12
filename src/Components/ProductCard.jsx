@@ -1,7 +1,7 @@
 // ProductCard.jsx
 import PropTypes from "prop-types";
-import { FavoriteBorder } from "@mui/icons-material";
-import { Card, IconButton, Typography } from "@mui/material";
+
+import { Card } from "@mui/material";
 
 const ProductCard = ({ imgSrc, price, name, category }) => {
   return (

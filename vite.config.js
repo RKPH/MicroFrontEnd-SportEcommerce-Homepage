@@ -10,6 +10,7 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./HomePage": "./src/Homepage.jsx", // Ensure the file name matches exactly
+        "./Login": "./src/Login.jsx",
       },
       remotes: {
         shell: "https://micro-frontend-shell.vercel.app/assets/remoteEntry.js", // Use Shell's remote entry

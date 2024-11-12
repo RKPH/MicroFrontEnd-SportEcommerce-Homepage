@@ -79,11 +79,11 @@ const Homepage = () => {
   return (
     <main className="w-full h-full">
       <div className="w-full my-2">
-        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold z-20">
+        <ul className="flex gap-x-4 w-full bg-white px-5 font-[AdihausDIN] text-base font-bold">
           {currentCategories.map((category) => (
             <li
               key={category}
-              className={`p-3 border z-20 border-black cursor-pointer ${
+              className={`p-3 border border-black cursor-pointer ${
                 selectedCategory === category
                   ? "bg-black text-white"
                   : "hover:bg-black hover:text-white"
