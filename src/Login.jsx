@@ -13,7 +13,7 @@ export function Login() {
     >
       <div className="w-full flex justify-center text-center items-center mb-8">
         <img
-          src={logo}
+          src="/logo.png"
           alt="Logo"
           className="h-12 mb-4" // Adjust height as needed
         />
