@@ -11,6 +11,11 @@ export function Login() {
         backgroundImage: `url('https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/16:9/w_4288,h_2412,c_limit/BlackForest-Germany-GettyImages-147180370.jpg')`,
       }}
     >
+      <div className="w-full flex text-center">
+        <span className="text-lg text-black font-bold">
+          Welcome to sport ecommerce
+        </span>
+      </div>
       <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-8 shadow-lg max-w-md w-full">
         <h3 className="text-3xl text-blue-gray-800 mb-2 text-center">
           Sign In
