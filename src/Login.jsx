@@ -15,7 +15,7 @@ export function Login() {
         <img
           src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
           alt="Logo"
-          className="h-12 mb-4" // Adjust height as needed
+          className="h-24 mb-4" // Adjust height as needed
         />
         <span className="text-2xl text-black font-bold">
           Welcome to sport ecommerce
