@@ -13,12 +13,13 @@ export function Login() {
       }}
     >
       <div className="w-full flex flex-col justify-center text-center items-center mb-8">
-        <img
-          src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
-          alt="Logo"
-          className="h-24 mb-4" // Adjust height as needed
-        />
-
+        <Link to="/">
+          <img
+            src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
+            alt="Logo"
+            className="h-24 mb-4" // Adjust height as needed
+          />
+        </Link>
         <span className="text-2xl text-black font-bold">
           Welcome to sport ecommerce
         </span>

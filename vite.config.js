@@ -15,7 +15,7 @@ export default defineConfig({
       remotes: {
         shell: "https://micro-frontend-shell.vercel.app/assets/remoteEntry.js", // Use Shell's remote entry
       },
-      shared: ["react", "react-dom"], // Shared dependencies
+      shared: ["react", "react-dom", "react-router-dom"], // Add react-router-dom
     }),
   ],
   build: {
