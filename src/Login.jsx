@@ -13,7 +13,7 @@ export function Login() {
     >
       <div className="w-full flex justify-center text-center items-center mb-8">
         <img
-          src="/logo.png"
+          src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
           alt="Logo"
           className="h-12 mb-4" // Adjust height as needed
         />
