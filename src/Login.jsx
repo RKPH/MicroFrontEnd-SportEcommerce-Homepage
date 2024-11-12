@@ -13,7 +13,7 @@ export function Login() {
       }}
     >
       <div className="w-full flex flex-col justify-center text-center items-center mb-8">
-        <Link to="https://micro-frontend-shell.vercel.app/">
+        <Link to="/Men">
           <img
             src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
             alt="Logo"
