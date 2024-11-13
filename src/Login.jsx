@@ -24,7 +24,7 @@ export function Login() {
           Welcome to sport ecommerce
         </span>
       </div>
-      <div className="bg-white bg-opacity-20 backdrop-blur-md rounded-lg p-8 shadow-lg max-w-md w-full">
+      <div className="bg-white/20 backdrop-blur-md rounded-lg p-8 shadow-lg max-w-md w-full">
         <h3 className="text-3xl text-blue-gray-800 mb-2 text-center">
           Sign In
         </h3>
