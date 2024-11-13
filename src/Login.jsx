@@ -12,7 +12,7 @@ export function Login() {
         backgroundImage: `url('https://media.cntraveler.com/photos/5eb18e42fc043ed5d9779733/16:9/w_4288,h_2412,c_limit/BlackForest-Germany-GettyImages-147180370.jpg')`,
       }}
     >
-      <div className="w-full flex flex-col justify-center text-center items-center mb-8">
+      <div className="w-full flex flex-col justify-center text-center items-center mb-4">
         <Link to="/">
           <img
             src="https://micro-front-end-sport-ecommerce-homepage.vercel.app//logo.png"
